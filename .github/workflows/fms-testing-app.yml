@@ -10,7 +10,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: my-permanent-runner
+    runs-on: [gpu]
 
     steps:
     - uses: actions/checkout@v4
