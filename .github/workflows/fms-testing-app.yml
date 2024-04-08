@@ -29,6 +29,9 @@ jobs:
           ${{ runner.os }}-${{ steps.setup_python.outputs.python-version }}-venv-
     - name: Install dependencies
       run: |
+        # Debug
+        pip freeze
+        
         # Create the virtual environment
         python -m venv --system-site-packages .venv
         . ./.venv/bin/activate
