@@ -116,7 +116,7 @@ class MetricReporter(TrainerPlugin):
     """
     A training plugin to periodically log metrics. Logs every `seconds`
     seconds by calling `writer` with the log message. A custom writer
-    should accept `*args` similar to `print`.
+    should accept `*args` similar to `print`. Test
     """
 
     # TODO: add optional validation dataloader and validation loss.
