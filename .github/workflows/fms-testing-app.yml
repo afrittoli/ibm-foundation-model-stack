@@ -14,11 +14,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Set up Python 3.10
-      id: setup_python
-      uses: actions/setup-python@v5
-      with:
-        python-version: "pypy-3.10"
+    # - name: Set up Python 3.10
+    #   id: setup_python
+    #   uses: actions/setup-python@v5
+    #   with:
+    #     python-version: "pypy-3.10"
     - name: Restore Virtualenv
       uses: actions/cache/restore@v4
       id: cache-venv-restore
@@ -30,7 +30,7 @@ jobs:
     - name: Install dependencies
       run: |
         # Debug
-        pip freeze
+        export PATH=/home/gha/miniforge3/bin/:$PATH
         
         # Create the virtual environment
         python -m venv --system-site-packages .venv
