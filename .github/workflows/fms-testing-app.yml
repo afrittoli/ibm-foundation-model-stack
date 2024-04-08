@@ -30,7 +30,7 @@ jobs:
     - name: Install dependencies
       run: |
         # Create the virtual environment
-        python -m venv --site-packages .venv
+        python -m venv --system-site-packages .venv
         . ./.venv/bin/activate
 
         # Install the dependencies
