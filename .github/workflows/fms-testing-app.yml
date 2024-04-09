@@ -51,7 +51,8 @@ jobs:
         # Install fms from the PR, all dependencies are already
         # installed in the virtual env
         pip install .
-        pytest -vv -rP tests/ --slow
+        pytest -vv -rP tests/ -m "not slow"
+        pytest -vv -rP tests/ -m slow
 
     - name: Save Virtualenv
       id: cache-venv-save
